@@ -15,8 +15,11 @@ const server = http.createServer((req, res) => {
 
   const method = req.method.toLowerCase();
 
+  const headers = req.headers;
+
   res.end();
 
+  console.log('HEADERS: ', headers);
   console.log(
     `${method.toUpperCase()} - ${path} : ${JSON.stringify(queryStringObject)}`,
   );
